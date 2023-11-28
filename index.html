@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>love me?</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <h1>Do you love me?</h1>
+  <main>
+    <div id="gif-container">
+      <img id="gif"
+        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGw0dG93NmYwY21ndjZpZjZqeThrMWJlNmw3dGRlNGRremg5YndqcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Kg5Q7JSJiV0XgrJVRc/giphy.gif"
+        alt="" srcset="" />
+    </div>
+    <div class="btn-grp">
+      <div class="btns primary-btn" onclick="love_accepted()">Yes</div>
+      <div class="btns secondary-btn">No</div>
+    </div>
+  </main>
+  <script>
+    let set_gifs = [
+      "https://i.pinimg.com/originals/8c/bb/9b/8cbb9b70ce1e8f18f721119a064c1c3b.gif",
+      "https://www.icegif.com/wp-content/uploads/2022/08/icegif-874.gif",
+      "https://media.tenor.com/Zna7dmgEX60AAAAC/cute-love.gif",
+      "https://media.tenor.com/ca9-PL8Va4sAAAAC/cute-bear-cute.gif",
+      "https://media4.giphy.com/media/9d3LQ6TdV2Flo8ODTU/200w.gif?cid=82a1493bx2azq1g8y3fyb4cls5kb3w4v7lyeqz5beoe2sbt6&ep=v1_gifs_related&rid=200w.gif&ct=g", "https://i.pinimg.com/originals/4f/52/a5/4f52a5fb7eecbf90265ec15c838f587d.gif",
+      "https://i.pinimg.com/originals/e8/d0/d0/e8d0d0800966171d3509698fb410e686.gif"
+    ];
+    let gif = document.querySelector("#gif");
+
+    setInterval(() => {
+      let rand_num = Math.floor(Math.random() * (set_gifs.length - 1));
+      gif.setAttribute("src", set_gifs[rand_num]);
+    }, 4000);
+
+    
+    const no_btn = document.querySelector(".secondary-btn");
+
+    no_btn.addEventListener("mouseover", () => {
+      let win_height = window.innerHeight - 200;
+      let win_width = window.innerWidth - 200;
+      let rand_top = Math.floor(Math.random() * win_height) + 100;
+      let rand_left = Math.floor(Math.random() * win_width) + 100;
+      no_btn.style.position = "absolute";
+      no_btn.style.top = rand_top + "px";
+      no_btn.style.left = rand_left + "px";
+    });
+
+    function love_accepted() {
+      let url = "accepted.html";
+      window.location = url;
+    }
+
+  </script>
+</body>
+
+</html>

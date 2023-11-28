@@ -1,0 +1,77 @@
+:root {
+    -primary: #C90404;
+    -shadow: #EFEFEF;
+}
+
+h1 {
+    color: #C90404;
+    text-align: center;
+    font-family: Inknut Antiqua;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.2px;
+    text-decoration-line: underline;
+}
+
+#gif-container {
+    margin: auto;
+    width: 400px;
+    height: 290px;
+    flex-shrink: 0;
+
+    border-radius: 48px;
+    background: #D2D2D2;
+    margin-bottom: 2.5rem;
+}
+
+#gif {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.btn-grp {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btns {
+    border-radius: 50px;
+    border: 1px solid rgba(201, 4, 4, 0.90);
+    background: rgba(201, 4, 4, 0.90);
+    box-shadow: 5px 13px 32.4px -1px rgba(0, 0, 0, .75);
+    display: flex;
+    width: 100px;
+    height: 45px;
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.32px;
+}
+
+.btns:hover {
+    cursor: pointer;
+}
+
+.btns:active {
+    transform: translateY(4px);
+    box-shadow: rgba(0, 0, .75);
+}
+
+.primary-btn {
+    color: #EFEFEF;
+}
+
+.secondary-btn {
+    color: rgba(201, 4, 4, 0.90);
+    background-color: #EFEFEF;
+}
